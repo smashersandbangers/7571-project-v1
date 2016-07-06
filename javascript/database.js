@@ -4,11 +4,19 @@ function authenticateUser(username, userpassword, hashed)
 	return true;
 }
 
-function listEvents()
+function getEvents()
 {
-	var events = {event01:[{eventName:"Success Through Failures", eventLocation:"Atlanta"},{eventName:"Successfully Failing",eventLocation:"Boston"}]};
+	console.log( "getEvents" );
+	var events = {
+			"eventInstances": [{
+				"eventName": "Success Through Failures",
+				"eventLocation": "Atlanta"
+			}, {
+				"eventName": "Successfully Failing",
+				"eventLocation": "Boston"
+			}]
+		};
 	
-	document.write("My events");
 	return events;
 }
 

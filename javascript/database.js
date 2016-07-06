@@ -8,7 +8,7 @@ function listEvents()
 {
 	var events = {event01:[{eventName:"Success Through Failures", eventLocation:"Atlanta"},{eventName:"Successfully Failing",eventLocation:"Boston"}]};
 	
-	document.write("hi");
+	document.write("My events");
 	return events;
 }
 

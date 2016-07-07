@@ -4,6 +4,7 @@ function authenticateUser(username, userpassword, hashed)
 	return true;
 }
 
+//returns all events (for now)
 function getEvents()
 {
 	console.log( "getEvents" );
@@ -20,6 +21,7 @@ function getEvents()
 	return events;
 }
 
+//returns a single event based on the eventid
 function getEvent(eventid)
 {
 	var event = {eventName:"Success Through Failures 2",eventLocation:"Charlotte"};
@@ -27,6 +29,7 @@ function getEvent(eventid)
 	return event;
 }
 
+//returns true or false, depening on age of user and number of available seats
 function registerEvent(user, eventid)
 {
 	return true;

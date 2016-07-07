@@ -11,10 +11,12 @@ function getEvents()
 	var events = {
 			"eventInstances": [{
 				"eventName": "Success Through Failures",
-				"eventLocation": "Atlanta"
+				"eventLocation": "Atlanta",
+				"eventDate": "4/22/2017"
 			}, {
 				"eventName": "Successfully Failing",
-				"eventLocation": "Boston"
+				"eventLocation": "Boston",
+				"eventDate": "4/24/2017"
 			}]
 		};
 	

@@ -28,6 +28,25 @@
 		</script>
 	</section>
 	
+	<section class=container id="event-list">
+		<h2>Single Event</h2>
+		<p><i>The following uses JavaScript.</i></p>
+		<script>
+			var e = getEvent( 42 );
+			
+			document.write("<ul>");
+			document.write(
+			"<li><a href=\"#\">"
+			+e.eventDate
+			+": "
+			+e.eventName
+			+" - "
+			+e.eventLocation
+			+"</a></li>");
+			document.write("</ul>");
+		</script>
+	</section>
+	
 
 	<footer class="container">
 		<small>&copy; Copyright Smashers and Bangers 2016</small>

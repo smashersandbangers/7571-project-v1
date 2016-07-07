@@ -46,3 +46,35 @@ function registerEvent(user, eventid)
 {
 	return true;
 }
+
+function getEventsAlpha()
+{
+	console.log("reading json file");
+	var result = $.getJSON("http://ec2-52-25-115-69.us-west-2.compute.amazonaws.com:5984/event-test/_design/events/_view/events",
+		function( data ) {
+  			console.log( "success" );
+			events = data.rows;
+			console.log( events );
+			//console.log( "length: "+data.events.length );
+			for( i=0; i<events.length; i++)
+			{
+				console.log( events[i].title );
+			}
+			
+			printHTMLv2(events);
+			//testIndexedDB(events);
+		})
+  		
+		.done(function() {
+    			console.log( "second success" );
+			testLocalStorage();
+  		})
+  		.fail(function() {
+    			console.log( "error" );
+  		})
+  		.always(function() {
+    			console.log( "complete" );
+  		});
+
+	console.log( result );
+}

@@ -51,8 +51,15 @@ function registerEvent(user, eventid)
 function getEventsAlpha()
 {
 	console.log("reading json file");
-	var result = $.getJSON("http://ec2-52-25-115-69.us-west-2.compute.amazonaws.com:5984/event-test/_design/events/_view/events",
-		function( data ) {
+	//console.log(  );
+	var result = $.ajax
+	({
+		url: "http://ec2-52-25-115-69.us-west-2.compute.amazonaws.com:5984/event-test/_design/events/_view/eventview01",
+		username: "smashers",
+		password: "mist7571",
+		dataType: "jsonp",
+		success: function( data )
+		{
   			console.log( "success" );
 			events = data.rows;
 			console.log( events );
@@ -61,10 +68,10 @@ function getEventsAlpha()
 			{
 				console.log( events[i].title );
 			}
-		})
+		}
+	})
 		.done(function() {
     			console.log( "second success" );
-			testLocalStorage();
   		})
   		.fail(function() {
     			console.log( "error" );

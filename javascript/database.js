@@ -47,6 +47,7 @@ function registerEvent(user, eventid)
 	return true;
 }
 
+//my hello world function for grabbing events from couchDB
 function getEventsAlpha()
 {
 	console.log("reading json file");
@@ -60,11 +61,7 @@ function getEventsAlpha()
 			{
 				console.log( events[i].title );
 			}
-			
-			printHTMLv2(events);
-			//testIndexedDB(events);
 		})
-  		
 		.done(function() {
     			console.log( "second success" );
 			testLocalStorage();

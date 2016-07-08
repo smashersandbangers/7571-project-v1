@@ -36,16 +36,16 @@
 			//TODO is take a GET parameter, use that for the eventid and pass it getEvent()
 			var e = getEvent( 42 );
 			
-			document.write("<ul>");
-			document.write(
-			"<li><a href=\"#\">"
-			+e.eventDate
-			+": "
-			+e.eventName
-			+" - "
-			+e.eventLocation
-			+"</a></li>");
-			document.write("</ul>");
+			document.write
+			(
+				"<ul><li><a href=\"#\">"
+				+e.eventDate
+				+": "
+				+e.eventName
+				+" - "
+				+e.eventLocation
+				+"</a></li></ul>"
+			);
 		</script>
 	</section>
 	

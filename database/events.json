@@ -1,5 +1,5 @@
-events = 
-	'[{
+{"events":
+	[{
 		"eventName": "Success Through Failures",
 		"eventLocation": "Atlanta",
 		"eventDate": "4/22/2017",
@@ -19,4 +19,5 @@ events =
 		"eventDate": "4/24/2017",
 		"eventSeats": "10",
 		"eventCurrentAttendees": "33"
-	}]';
+	}]
+}

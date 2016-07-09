@@ -7,7 +7,22 @@ function authenticateUser(username, userpassword, hashed)
 //returns all events (for now, i would like to add after-date variable)
 function getEvents()
 {
-	console.log( "getEvents" );
+	console.log( "getEvents2" );
+	//console.log( events );
+	var result = $.getJSON("./database/events.json",
+		function( data ) {
+  			console.log( "success" );
+		})
+		.done(function() {
+    			console.log( "second success" );
+  		})
+  		.fail(function() {
+    			console.log( "error" );
+  		})
+  		.always(function() {
+    			console.log( "complete" );
+  		});
+	console.log( result );
 	var events = {
 			"eventInstances": [{
 				"eventName": "Success Through Failures",

@@ -1,3 +1,5 @@
+var preloadEvents = true;
+
 //takes a string username, string password and a boolean for is the password hashed
 function authenticateUser(username, userpassword, hashed)
 {
@@ -8,38 +10,12 @@ function authenticateUser(username, userpassword, hashed)
 function getEvents()
 {
 	console.log( "getEvents2" );
-	//console.log( events );
-	var result = $.getJSON("./database/events.json",
-		function( data ) {
-  			console.log( "success" );
-		})
-		.done(function() {
-    			console.log( "second success" );
-  		})
-  		.fail(function() {
-    			console.log( "error" );
-  		})
-  		.always(function() {
-    			console.log( "complete" );
-  		});
-	console.log( result );
-	var events = {
-			"eventInstances": [{
-				"eventName": "Success Through Failures",
-				"eventLocation": "Atlanta",
-				"eventDate": "4/22/2017",
-				"eventSeats": "8",
-				"eventCurrentAttendees": "8"
-			}, {
-				"eventName": "Successfully Failing",
-				"eventLocation": "Boston",
-				"eventDate": "4/24/2017",
-				"eventSeats": "10",
-				"eventCurrentAttendees": "7"
-			}]
-		};
 	
-	return events;
+	//console.log( events );
+	if(preloadEvents)
+		return preloadedEvents;
+	else
+		return NULL;
 }
 
 //returns a single event based on the eventid

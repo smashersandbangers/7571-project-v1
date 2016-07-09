@@ -1,11 +1,10 @@
 function printEvents( events )
 {
-	//console.log( events );
-	eventInstances = events.eventInstances;
+	console.log( events );
 	
 	document.write("<ul>");
-	for( var e in eventInstances ){
-		var event = eventInstances[e];
+	for( var e in events ){
+		var event = events[e];
 		//console.log(eventInstances[e]);
 		
 		document.write(

@@ -1,4 +1,5 @@
 var preloadEvents = true;
+var testApplicationMode = true;
 
 //takes a string username, string password and a boolean for is the password hashed
 function authenticateUser(username, userpassword, hashed)
@@ -21,7 +22,7 @@ function getEvents()
 //returns a single event based on the eventid
 function getEvent(eventid)
 {
-	var event = {
+	var defaultTestEvent = {
 				"eventName": "Successfully Failing",
 				"eventLocation": "Boston",
 				"eventDate": "4/24/2017",
@@ -29,30 +30,21 @@ function getEvent(eventid)
 				"eventCurrentAttendees": "7"
 			};
 	
-	return event;
-
-//returns a single event based on the eventid
-function getEvent(eventid)
-{
-    var event = {
-		"eventName": "Successfully Failing",
-		"eventLocation": "Boston",
-		"eventDate": "4/24/2017",
-		"eventSeats": "10",
-		"eventCurrentAttendees": "7"
-	};
-
-    //console.log(eventid);
-	document.getElementById("liEn").innerHTML="Successfully Failing";
-	document.getElementById("liEl").innerHTML="Boston";
-	document.getElementById("liEd").innerHTML="4/24/2017";
-	document.getElementById("liEs").innerHTML="10";
-	document.getElementById("liCA").innerHTML="7";
+    //Mathews test code block
+	//document.getElementById("liEn").innerHTML="Successfully Failing";
+	//document.getElementById("liEl").innerHTML="Boston";
+	//document.getElementById("liEd").innerHTML="4/24/2017";
+	//document.getElementById("liEs").innerHTML="10";
+	//document.getElementById("liCA").innerHTML="7";
 	
-    return event;
-}
-
-
+	//parses events to search for matching eventid
+	var events = getEvents();
+	for( var i=0; i<events.length; i++){
+		if( events[i].eventid == eventid)
+			return events[i];
+	}
+	
+	return defaultTestEvent;
 }
 
 //returns true or false, depening on age of user and number of available seats

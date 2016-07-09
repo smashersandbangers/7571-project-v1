@@ -39,6 +39,27 @@ function getEvent(eventid)
 			};
 	
 	return event;
+//returns a single event based on the eventid
+function getEvent(eventid)
+{
+    var event = {
+                "eventName": "Successfully Failing",
+                "eventLocation": "Boston",
+                "eventDate": "4/24/2017",
+                "eventSeats": "10",
+                "eventCurrentAttendees": "7"
+            };
+
+    //console.log(eventid);
+document.getElementById("liEn").innerHTML="Successfully Failing";
+document.getElementById("liEl").innerHTML="Boston";
+document.getElementById("liEd").innerHTML="4/24/2017";
+document.getElementById("liEs").innerHTML="10";
+document.getElementById("liCA").innerHTML="7";
+    return event;
+}
+
+
 }
 
 //returns true or false, depening on age of user and number of available seats

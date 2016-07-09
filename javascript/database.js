@@ -39,23 +39,25 @@ function getEvent(eventid)
 			};
 	
 	return event;
+
 //returns a single event based on the eventid
 function getEvent(eventid)
 {
     var event = {
-                "eventName": "Successfully Failing",
-                "eventLocation": "Boston",
-                "eventDate": "4/24/2017",
-                "eventSeats": "10",
-                "eventCurrentAttendees": "7"
-            };
+		"eventName": "Successfully Failing",
+		"eventLocation": "Boston",
+		"eventDate": "4/24/2017",
+		"eventSeats": "10",
+		"eventCurrentAttendees": "7"
+	};
 
     //console.log(eventid);
-document.getElementById("liEn").innerHTML="Successfully Failing";
-document.getElementById("liEl").innerHTML="Boston";
-document.getElementById("liEd").innerHTML="4/24/2017";
-document.getElementById("liEs").innerHTML="10";
-document.getElementById("liCA").innerHTML="7";
+	document.getElementById("liEn").innerHTML="Successfully Failing";
+	document.getElementById("liEl").innerHTML="Boston";
+	document.getElementById("liEd").innerHTML="4/24/2017";
+	document.getElementById("liEs").innerHTML="10";
+	document.getElementById("liCA").innerHTML="7";
+	
     return event;
 }
 
@@ -66,40 +68,4 @@ document.getElementById("liCA").innerHTML="7";
 function registerEvent(user, eventid)
 {
 	return true;
-}
-
-//my hello world function for grabbing events from couchDB
-function getEventsAlpha()
-{
-	console.log("reading json file");
-	//console.log(  );
-	var result = $.ajax
-	({
-		url: "http://ec2-52-25-115-69.us-west-2.compute.amazonaws.com:5984/event-test/_design/events/_view/eventview01",
-		username: "smashers",
-		password: "mist7571",
-		dataType: "jsonp",
-		success: function( data )
-		{
-  			console.log( "success" );
-			events = data.rows;
-			console.log( events );
-			//console.log( "length: "+data.events.length );
-			for( i=0; i<events.length; i++)
-			{
-				console.log( events[i].title );
-			}
-		}
-	})
-		.done(function() {
-    			console.log( "second success" );
-  		})
-  		.fail(function() {
-    			console.log( "error" );
-  		})
-  		.always(function() {
-    			console.log( "complete" );
-  		});
-
-	console.log( result );
 }

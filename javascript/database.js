@@ -37,6 +37,7 @@ function getEvent(eventid)
 	//document.getElementById("liEs").innerHTML="10";
 	//document.getElementById("liCA").innerHTML="7";
 	
+	console.log( location.pathname );
 	//parses events to search for matching eventid
 	var events = getEvents();
 	for( var i=0; i<events.length; i++){

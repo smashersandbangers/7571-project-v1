@@ -1,4 +1,5 @@
 .smashers-footer{
+	/* implements the sticky */
   position: absolute;
   bottom: 0;
   width: 100%;

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+	<script src="./javascript/presentation.js"></script>
+	<script src="./javascript/database.js"></script>
+	<script src="./javascript/events-database.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<title>Event Manager</title>
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+		<ul class="nav navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">Upcoming Events</a></li>
+			<li class="nav-item active"><a class="nav-link" href="event-list.html">Find Events</a></li>
+		</ul>
+	</nav>
+	<header class="container" id="page-header" style="margin-top:50px;">
+        	<h1 id="mouse">Event Manager</h1>
+	</header>
+
+	<section class=container id="event-list">
+		<h2>List of Events</h2>
+		<p><i>The following uses JavaScript.</i></p>
+		<script>
+			printEvents( getEvents() );
+		</script>
+	</section>
+	
+	<section class=container id="event-list">
+		<h2>Single Event</h2>
+		<p><i>The following uses JavaScript.</i></p>
+		<script>
+			//this is a hello world example for retreiving a single event
+			//TODO is take a GET parameter, use that for the eventid and pass it getEvent()
+			var e = getEvent( 01 );
+			
+			document.write
+			(
+				"<ul><li><a href=\"#\">"
+				+e.eventDate
+				+": "
+				+e.eventName
+				+" - "
+				+e.eventLocation
+				+"</a></li></ul>"
+			);
+		</script>
+	</section>
+	
+
+	<footer class="container">
+		<small>&copy; Copyright Smashers and Bangers 2016</small>
+	</footer>
+
+	
+	
+	
+	<script>//$( document ).ready(function() {loadData();}); </script>
+</body>
+</html>

@@ -5,6 +5,11 @@ var preloadedEvents = [{
 		'eventDate': '4/22/2017',
 		'eventSeats': '8',
 		'eventCurrentAttendees': '8'
+		'eventList':
+		{
+			'firstName': 'John',
+			'lastName': 'Smitty'
+		}
 	}, {
 		"eventid": "02",
 		'eventName': 'Successfully Failing',
